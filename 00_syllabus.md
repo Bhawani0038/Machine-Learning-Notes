@@ -192,6 +192,7 @@ This module should be taught **after students understand regression and classifi
 3. RMSE
 4. R²
 5. Adjusted R²
+6. Cross Validation
 
 ### Classification
 
@@ -209,6 +210,7 @@ This module should be taught **after students understand regression and classifi
 17. AUC
 18. Threshold
 19. Precision-Recall Trade-off
+20. Cross Validation
 
 ### Practical Decision Making
 
@@ -238,6 +240,7 @@ This module should be taught **after students understand regression and classifi
 15. PCA
 16. PCA Intuition
 17. PCA in Python
+
 
 ### Project
 
