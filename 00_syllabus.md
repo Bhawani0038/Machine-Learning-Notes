@@ -299,38 +299,39 @@ Business Interpretation
 12. Ensemble Model Comparison
 
 ---
+# Module 11 — ML Deployment
 
-# Module 11 — End-to-End ML Projects
+1. What is Model Deployment?
+2. Saving ML Models
+3. `joblib`
+4. Loading Models
+5. Building Prediction Application
+6. Streamlit ML Application
+7. FastAPI ML API
+8. Connecting Frontend to ML API
+9. Requirements File
+10. Virtual Environment
+11. Docker Basics
+12. Deployment Concepts
+13. Model Versioning
+14. Basic ML Monitoring
 
-Rather than teaching projects as isolated tutorials, each project should follow the **same professional workflow**.
 
-### Project 1 — House Price Prediction
+# Module 12 — End-to-End ML Projects
 
-Regression
+### Project 1 — House Price Prediction | Regression
 
-### Project 2 — Student Result Prediction
+### Project 2 — Student Result Prediction | Classification
 
-Classification
+### Project 3 — Customer Churn Prediction | Classification
 
-### Project 3 — Customer Churn Prediction
+### Project 4 — Loan Approval Prediction | Classification
 
-Classification
+### Project 5 — Customer Segmentation | Clustering
 
-### Project 4 — Loan Approval Prediction
+### Project 6 — Sales Prediction | Regression
 
-Classification
-
-### Project 5 — Customer Segmentation
-
-Clustering
-
-### Project 6 — Sales Prediction
-
-Regression
-
-### Project 7 — Employee Salary Prediction
-
-Regression
+### Project 7 — Employee Salary Prediction | Regression
 
 ### Project 8 — Medical Diagnosis
 
@@ -361,21 +362,3 @@ Final Model
 ```
 
 ---
-
-# Module 12 — ML Deployment
-
-1. What is Model Deployment?
-2. Saving ML Models
-3. `joblib`
-4. Loading Models
-5. Building Prediction Application
-6. Streamlit ML Application
-7. FastAPI ML API
-8. Connecting Frontend to ML API
-9. Requirements File
-10. Virtual Environment
-11. Docker Basics
-12. Deployment Concepts
-13. Model Versioning
-14. Basic ML Monitoring
-

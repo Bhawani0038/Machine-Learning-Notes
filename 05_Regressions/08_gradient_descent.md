@@ -169,6 +169,46 @@ print("Prediction for 6 hours:", round(m * 6 + c, 2))
 
 The learned parameters should approach the underlying relationship $y=10x+10$, although the exact result depends on the learning rate, iteration count and numerical convergence.
 
+```python
+
+import numpy as np
+from sklearn.linear_model import SGDRegressor
+from sklearn.metrics import mean_squared_error
+
+# Training data
+X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+y = np.array([20, 30, 40, 50, 60])
+
+# Create model using gradient descent
+model = SGDRegressor(
+    loss="squared_error",
+    learning_rate="constant",
+    eta0=0.01,
+    max_iter=2000,
+    tol=None,
+    random_state=42
+)
+
+# Train the model
+model.fit(X, y)
+
+# Predictions
+y_pred = model.predict(X)
+
+# Model parameters
+m = model.coef_[0]
+c = model.intercept_[0]
+
+# Evaluation
+mse = mean_squared_error(y, y_pred)
+
+print("Slope:", round(m, 2))
+print("Intercept:", round(c, 2))
+print("MSE:", round(mse, 4))
+print("Prediction for 6 hours:", round(model.predict([[6]])[0], 2))
+
+```
+
 ### Code explanation
 
 - `m` and `c` start at zero.
