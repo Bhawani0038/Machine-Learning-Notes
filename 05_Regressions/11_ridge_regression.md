@@ -182,3 +182,41 @@ print(
 | Coefficients can become large | Coefficients are shrunk |
 | May be unstable with highly correlated features | Often improves coefficient stability |
 | No `alpha` parameter | Has an `alpha` parameter |
+
+
+## 7\. Understanding slope with ridge and lasso
+
+```python
+
+import pandas as pd
+from sklearn.linear_model import Ridge, Lasso
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+alphas = [0.01, 0.1,0.2,0.3,0.4, 1.0, 10.0, 100.0, 10000000]
+
+results = []
+
+for alpha in alphas:
+    model = Pipeline([
+        ("scaler", StandardScaler()),
+        ("ridge", Ridge(alpha=alpha))
+    ])
+
+    model.fit(X_train, y_train)
+
+    coefficients = model.named_steps["ridge"].coef_
+
+    results.append({
+        "Alpha": alpha,
+        "Area Slope": coefficients[0],
+        "Bedrooms Slope": coefficients[1],
+        "House Age Slope": coefficients[2],
+        "Intercept": model.named_steps["ridge"].intercept_
+    })
+
+results_df = pd.DataFrame(results).round(4)
+
+print(results_df.to_string(index=False))
+
+```
